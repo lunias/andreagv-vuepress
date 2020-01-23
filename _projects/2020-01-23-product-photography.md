@@ -7,10 +7,12 @@ tags:
   - Product
 author: andreagvart
 location: Minnesota
-image: https://source.unsplash.com/random
+image: /hero2.jpg
 description: Hello world.
 featured: true
 language: English
+client: Julian Designs
+clientUrl: https://www.julianinc.com
 ---
 
 # This is a header
