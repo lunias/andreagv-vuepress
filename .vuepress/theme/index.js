@@ -67,7 +67,7 @@ module.exports = (themeConfig, ctx) => {
     "reading-time",
     "smooth-scroll",
     "reading-progress",
-    "@vuepress/medium-zoom",
+    ["@vuepress/medium-zoom", {selector: '.vuepress-blog-theme-content :not(a) > img', options: {margin: 50}}],
     "@vuepress/nprogress",
     ["@vuepress/blog", blogPluginOptions],
     [

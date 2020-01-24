@@ -8,7 +8,7 @@
         to="/"
         class="text-decoration-none h4"
       >
-        <img src="/logo-primary.png" alt="Andrea Gallego-Valencia" class="logo">
+        <img src="/logo-primary.png" alt="Andrea Gallego-Valencia" class="logo" id="hero-logo">
         <span class="site-title">{{ $site.title }}</span>
       </router-link>
       <SearchBox />
@@ -24,7 +24,7 @@
           v-for="item in routerItems"
           :index="item.link"
           :key="item.link"
-          @click="activeIndex !== item.link ? $router.push(item.link) : scrollTo(`#header`)"
+          @click="activeIndex !== item.link ? $router.push(item.link) : scrollTo(`#hero-logo`, item.link, activeIndex)"
         >
           <router-link
             :to="item.link"
@@ -65,6 +65,7 @@ export default {
   components: { SearchBox },
   computed: {
     activeIndex() {
+      console.log(this.$route.path)
       return this.$route.path
     },
     routerItems() {
@@ -87,8 +88,8 @@ export default {
         header.classList.add("px-5");
       }      
     },
-    scrollTo (element) {
-      this.$scrollTo(element);
+    scrollTo (element, link, active) {
+      this.$scrollTo(element, {offset: 10});
     }
   },
   mounted () {

@@ -12,7 +12,7 @@
         <h1 class="display-3 site-title">{{ $site.title }}</h1>
         <p class="font-weight-light h3 text-light">Photography / Videography Portfolio and Blog</p>
         <button
-          v-scroll-to="{ el: '#posts', offset: -130 }"
+          v-scroll-to="{ el: '#posts', offset: -100 }"
           class="el-button el-button--primary my-3 main-btn"
         >Blog</button>
         <a
