@@ -89,7 +89,7 @@ export default {
       }      
     },
     scrollTo (element, link, active) {
-      this.$scrollTo(element, {offset: 10});
+      this.$scrollTo(element, {offset: -10});
     }
   },
   mounted () {
