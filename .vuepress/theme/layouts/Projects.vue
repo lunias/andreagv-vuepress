@@ -1,8 +1,6 @@
 <template>
   <el-container>
     <el-main class="">
-      <h1 class="display-4">Recent Projects</h1>
-      <p class="text-secondary h3">Here are samples from some of my projects</p>
       <el-row
         :gutter="10"
         align="center"
