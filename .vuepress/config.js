@@ -58,7 +58,8 @@ module.exports = {
         summary: true,
         socialShare: true,
         socialShareNetworks: ["twitter", "reddit", "facebook"],
-        googleAnalytics: "",
+        googleAnalytics: "UA-137350132-3",
+        disqus: "andreagv",
         heroImage: "/hero.jpg",
         about: {
             fullName: "Andrea Gallego-Valencia",
