@@ -19,7 +19,7 @@ module.exports = {
             },
             {
                 text: 'Résumé',
-                link: '/Andrea_Gallego_Valencia_Resume.pdf',
+                link: 'https://andreagv.com/Andrea_Gallego_Valencia_Resume.pdf',
                 icon: 'el-icon-document'
             }
         ],
