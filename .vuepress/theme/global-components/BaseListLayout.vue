@@ -11,13 +11,13 @@
         <img src="/logo-primary.png" alt="Andrea Gallego-Valencia">        
         <h1 class="display-3 site-title">{{ $site.title }}</h1>
         <p class="font-weight-light h3 text-light">Photography / Videography Portfolio and Blog</p>
-        <a
-          href="#posts"
-          class="el-button el-button--primary my-3"
-        >Blog</a>
+        <button
+          v-scroll-to="{ el: '#posts', offset: -130 }"
+          class="el-button el-button--primary my-3 main-btn"
+        >Blog</button>
         <a
           href="/projects"
-          class="el-button el-button--primary my-3"
+          class="el-button el-button--primary my-3 main-btn"
         >Recent Projects</a>
       </div>
     </header>
@@ -98,5 +98,9 @@ header.home-hero {
 
 .site-title {
   font-family: 'Tinos', serif;
+}
+
+.main-btn {
+  outline: none;
 }
 </style>

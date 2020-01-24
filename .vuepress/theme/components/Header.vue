@@ -13,7 +13,7 @@
       </router-link>
       <SearchBox />
     </div>
-    <nav class="px-5">
+[       <nav class="px-5" id="nav">
       <el-menu
         v-if="$themeConfig.nav"
         :default-active="activeIndex"
@@ -24,7 +24,7 @@
           v-for="item in routerItems"
           :index="item.link"
           :key="item.link"
-          @click="activeIndex !== item.link && $router.push(item.link)"
+          @click="activeIndex !== item.link ? $router.push(item.link) : scrollTo(`#header`)"
         >
           <router-link
             :to="item.link"
@@ -73,6 +73,29 @@ export default {
     externalItems() {
       return this.$themeConfig.nav.filter((item) => item.external)
     }
+  },
+  methods: {
+    handleScroll (event) {
+
+    var header = document.getElementById("nav");
+    var sticky = header.offsetTop;
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+        header.classList.remove("px-5");
+      } else {
+        header.classList.remove("sticky");
+        header.classList.add("px-5");
+      }      
+    },
+    scrollTo (element) {
+      this.$scrollTo(element);
+    }
+  },
+  created () {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  destroyed () {
+    window.removeEventListener('scroll', this.handleScroll);
   }
 };
 </script>
@@ -92,5 +115,11 @@ export default {
   font-weight: 300;
   font-family: 'Tinos', serif;
   position: relative;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
 }
 </style>
