@@ -91,7 +91,7 @@ export default {
       this.$scrollTo(element);
     }
   },
-  created () {
+  mounted () {
     window.addEventListener('scroll', this.handleScroll);
   },
   destroyed () {
