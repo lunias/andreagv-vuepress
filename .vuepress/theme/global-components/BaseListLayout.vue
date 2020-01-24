@@ -8,7 +8,7 @@
       :style="{backgroundImage: 'url(' + $withBase($themeConfig.heroImage) + ')'}"
     >
       <div class="p-3 text-center text-light">
-        <img src="/logo-primary.png" alt="Andrea Gallego-Valencia">        
+        <img src="/logo-primary.png" alt="Andrea Gallego-Valencia" style="max-width:100%;">        
         <h1 class="display-3 site-title">{{ $site.title }}</h1>
         <p class="font-weight-light h3 text-light">Photography / Videography Portfolio and Blog</p>
         <button

@@ -17,7 +17,7 @@
       </div>
       <div class="p-3">
         <p>{{ $themeConfig.about.bio }}</p>
-        <img src="/logo-hero.png" alt="Andrea Gallego-Valencia Photography">
+        <img src="/logo-hero.png" alt="Andrea Gallego-Valencia Photography" style="max-width:100%;">
       </div>
       <hr class="mt-0" />
       <ul
