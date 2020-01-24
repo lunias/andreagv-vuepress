@@ -60,7 +60,7 @@ jobs:
       - persist_to_workspace:
           root: ~/project
           paths:
-            - docs/.vuepress/dist
+            - .vuepress/dist
 
   #------------------------------------------------------------
   # 3. Deploy to S3
@@ -76,7 +76,7 @@ jobs:
           command: |
             if [ "${CIRCLE_BRANCH}" = "master" ]; then
               cd ~/project/docs/.vuepress/dist
-              ~/project/s3deploy -region=us-east-1 -bucket=www.andreagv.com -v
+              ~/project/s3deploy -region=us-east-1 -bucket=www.andreagv.com -distribution-id=E3KG2YEMGPZ5PQ -v
             else
               echo "Non-master branch: dry run only"
               echo
@@ -90,7 +90,7 @@ jobs:
               echo
               ls -lAF
               echo
-              ~/project/s3deploy -region=us-east-1 -bucket=www.andreagv.com -v -try
+              ~/project/s3deploy -region=us-east-1 -bucket=www.andreagv.com -distribution-id=E3KG2YEMGPZ5PQ -v -try
             fi
 
 #------------------------------------------------------------
