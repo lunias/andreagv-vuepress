@@ -75,7 +75,7 @@ jobs:
           name: 'Deploy to S3'
           command: |
             if [ "${CIRCLE_BRANCH}" = "master" ]; then
-              cd ~/project/docs/.vuepress/dist
+              cd ~/project/.vuepress/dist
               ~/project/s3deploy -region=us-east-1 -bucket=www.andreagv.com -distribution-id=E3KG2YEMGPZ5PQ -v
             else
               echo "Non-master branch: dry run only"
@@ -84,7 +84,7 @@ jobs:
               pwd
               echo
               ls -lAF
-              cd ~/project/docs/.vuepress/dist
+              cd ~/project/.vuepress/dist
               echo "Built files:"
               pwd
               echo
