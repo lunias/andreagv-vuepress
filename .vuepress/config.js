@@ -18,11 +18,6 @@ module.exports = {
                 icon: 'el-icon-camera'
             },
             {
-                text: 'Blog',
-                link: '/#posts',
-                icon: 'el-icon-news'
-            },
-            {
                 text: 'Résumé',
                 link: '/Andrea_Gallego_Valencia_Resume.pdf',
                 icon: 'el-icon-document'
@@ -53,7 +48,7 @@ module.exports = {
                     link: 'https://policies.google.com/privacy?hl=en-US',
                 },
                 {
-                    text: 'MIT Licensed | Copyright © 2018-present Vue.js',
+                    text: 'MIT Licensed | Copyright © 2020-present Andrea Gallego-Valencia',
                     link: '',
                 }
             ]
@@ -67,8 +62,8 @@ module.exports = {
         heroImage: "/hero.jpg",
         about: {
             fullName: "Andrea Gallego-Valencia",
-            bio: "I am a passionate Photographer, I love capturing the world in new ways ♥ ...",
-            image: "andreagv.jpg"
+            bio: "I am a Photographer / Videographer living near Minnapolis, MN.  I love capturing the world in new ways everyday ♥ ...",
+            image: "/andreagv.jpg"
         }
     }
 }
