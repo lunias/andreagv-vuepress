@@ -21,7 +21,7 @@
         class="d-flex justify-content-center border-0"
       >
         <el-menu-item
-          v-for="item in $themeConfig.nav"
+          v-for="item in routerItems"
           :index="item.link"
           :key="item.link"
           @click="activeIndex !== item.link && $router.push(item.link)"
@@ -37,6 +37,22 @@
             {{ item.text }}
           </router-link>
         </el-menu-item>
+        <el-menu-item
+          v-for="item in externalItems"
+          :index="item.link"
+          :key="item.link"
+          @click="activeIndex !== item.link"
+        >
+          <a :href="item.link"
+            class="text-decoration-none d-block h-100 w-100"
+          >
+            <i
+              v-if="item.icon"
+              :class="item.icon"
+            ></i>
+            {{ item.text }}
+          </a>
+        </el-menu-item>
       </el-menu>
     </nav>
   </header>
@@ -50,6 +66,12 @@ export default {
   computed: {
     activeIndex() {
       return this.$route.path
+    },
+    routerItems() {
+      return this.$themeConfig.nav.filter((item) => !item.external)
+    },
+    externalItems() {
+      return this.$themeConfig.nav.filter((item) => item.external)
     }
   }
 };
